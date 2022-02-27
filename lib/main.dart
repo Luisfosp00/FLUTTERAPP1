@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'screens/dataScreen.dart';
 import 'screens/secondScreen.dart';
 import 'screens/thirdScreen.dart';
+import 'screens/stackScreen.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -19,6 +20,7 @@ void main() {
       '/second':(context)=> const SecondPage(),
       '/datos':(context)=> const DataPage(),
       '/third':(context)=> const ThirdPage(),
+      '/stack':(context)=> const TestStack()
       },
     //home: HomePage(),
   ));
@@ -93,8 +95,18 @@ class HomePage extends StatelessWidget {
                 onPressed: (){
                   Navigator.pushNamed(context,'/third');
               }
+            ),
+            SizedBox(height: 10.0),
+            ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.green),
+                padding: MaterialStateProperty.all(EdgeInsets.symmetric(horizontal: 25, vertical: 15)),
+              ),
+              child: const Text('Stack'),
+                onPressed: (){
+                  Navigator.pushNamed(context,'/stack');
+              }
             )
-
             ],
             ),
     ),
