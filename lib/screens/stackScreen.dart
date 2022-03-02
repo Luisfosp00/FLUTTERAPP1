@@ -18,7 +18,7 @@ class TestStack extends StatelessWidget {
           child: Center(
             child: Stack(
               clipBehavior: Clip.antiAliasWithSaveLayer, fit: StackFit.expand,
-              overflow: Overflow.visible,
+              overflow: Overflow.clip,
               children: <Widget>[
                 Container(
                   width:300.0,
@@ -40,7 +40,14 @@ class TestStack extends StatelessWidget {
                   child: Container(
                     width:200.0,
                     height:200.0,
-                    color: Colors.purple,
+                    //color: Colors.purple,
+                    alignment: Alignment.bottomCenter,
+                    padding: const EdgeInsets.all(15.0),
+                    decoration: const BoxDecoration(
+                    image:DecorationImage(
+                      image:  NetworkImage("https://ih1.redbubble.net/image.1558722819.4560/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg")
+                    ),
+                  ),
                   )
                 )
               ],
@@ -50,6 +57,8 @@ class TestStack extends StatelessWidget {
       ),
     );
   }
+
+  
   Widget  stackSinPos(){
     return Center(
         child:SizedBox(

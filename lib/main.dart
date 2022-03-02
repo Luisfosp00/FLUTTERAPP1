@@ -4,11 +4,14 @@
 //import 'dart:ui';
 
 
+//import 'dart:js';
+
 import 'package:flutter/material.dart';
 import 'screens/dataScreen.dart';
 import 'screens/secondScreen.dart';
 import 'screens/thirdScreen.dart';
 import 'screens/stackScreen.dart';
+import 'screens/dataStackScreen.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -20,7 +23,8 @@ void main() {
       '/second':(context)=> const SecondPage(),
       '/datos':(context)=> const DataPage(),
       '/third':(context)=> const ThirdPage(),
-      '/stack':(context)=> const TestStack()
+      '/stack':(context)=> const TestStack(),
+      '/dataStack':(context)=> const dataStack()
       },
     //home: HomePage(),
   ));
@@ -51,7 +55,7 @@ class HomePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-            Image.asset("assets/img/RedBull2.jpg", width:370.0),
+            Image.asset("assets/img/RedBull2.jpg", width:170.0),
                SizedBox(height: 20.0),
             ElevatedButton(
               style: ButtonStyle(
@@ -105,6 +109,17 @@ class HomePage extends StatelessWidget {
               child: const Text('Stack'),
                 onPressed: (){
                   Navigator.pushNamed(context,'/stack');
+              }
+            ),
+            SizedBox(height: 10.0),
+            ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.green),
+                padding: MaterialStateProperty.all(EdgeInsets.symmetric(horizontal: 25, vertical: 15)),
+              ),
+              child: const Text('DataStack'),
+                onPressed: (){
+                  Navigator.pushNamed(context,'/dataStack');
               }
             )
             ],
