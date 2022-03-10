@@ -7,11 +7,12 @@
 //import 'dart:js';
 
 import 'package:flutter/material.dart';
-import 'screens/dataScreen.dart';
-import 'screens/secondScreen.dart';
-import 'screens/thirdScreen.dart';
-import 'screens/stackScreen.dart';
-import 'screens/dataStackScreen.dart';
+import 'package:testflutter/screens/formScreen.dart';
+import 'package:testflutter/screens/dataScreen.dart';
+import 'package:testflutter/screens/secondScreen.dart';
+import 'package:testflutter/screens/thirdScreen.dart';
+import 'package:testflutter/screens/stackScreen.dart';
+import 'package:testflutter/screens/dataStackScreen.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -19,13 +20,15 @@ void main() {
     title: 'Flutter demo',
     initialRoute: '/',
     routes: {
-      '/':(context)=> const HomePage(),
+      '/':(context)=> const FormScreen(),
+      //'/':(context)=> const HomePage(),
       '/second':(context)=> const SecondPage(),
       '/datos':(context)=> const DataPage(),
       '/third':(context)=> const ThirdPage(),
       '/stack':(context)=> const TestStack(),
       '/dataStack':(context)=> const dataStack()
-      },
+      //'/form':(context)=> const ()
+    },
     //home: HomePage(),
   ));
 }
