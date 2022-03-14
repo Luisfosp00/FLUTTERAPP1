@@ -14,6 +14,7 @@ import 'package:testflutter/screens/secondScreen.dart';
 import 'package:testflutter/screens/thirdScreen.dart';
 import 'package:testflutter/screens/stackScreen.dart';
 import 'package:testflutter/screens/dataStackScreen.dart';
+import 'package:testflutter/screens/paymentScreen.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -21,7 +22,10 @@ void main() {
     title: 'Flutter demo',
     initialRoute: '/',
     routes: {
-      '/':(context)=> const FormScreen(),
+      '/':(context)=> const PaymentScreen(),
+
+
+      //'/':(context)=> const FormScreen(),
       //'/':(context)=> const FormScreen(),
       //'/':(context)=> const HomePage(),
       '/second':(context)=> const SecondPage(),
@@ -60,7 +64,7 @@ class HomePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-            Image.asset("assets/img/RedBull2.jpg", width:170.0),
+            Image.asset("assets/img/RedBull2.jpg", width:250.0),
                SizedBox(height: 20.0),
             ElevatedButton(
               style: ButtonStyle(
